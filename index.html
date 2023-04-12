@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <title>Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue&display=swap');
+  </style>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <section class="nav-bar">
+    <div class="logo-nav-container">
+      <div class="logo"> <img src="images/logo.svg" alt="snap" id="logo"> </div>
+
+      <nav>
+        <div class="nav">
+          <div class="icon-close-menu-container">
+            <img src="images/icon-close-menu.svg" alt="x" id="icon-close-menu">
+          </div>
+  
+          <div class="nav-container">
+            <ul class="primary-nav">
+              <li id="features-link" class="primary link">
+                <a href="#" class="features-parent-link">
+                  Features
+                  <img src="images/icon-arrow-down.svg" alt=">" class="features down-arrow">
+                  <img src="images/icon-arrow-up.svg" alt="<" class="features up-arrow">
+                </a>
+  
+                <ul class="features-sub-links">
+                  <li>
+                    <a href="#">
+                      <img src="images/icon-todo.svg" alt="todo">
+                      <span>Todo List</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/icon-calendar.svg" alt="calendar">
+                      <span>Calender</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/icon-reminders.svg" alt="reminder">
+                      <span>Reminder</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="images/icon-planning.svg" alt="planning">
+                      <span>Planning</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li id="company-link" class="primary link">
+                <a href="#" class="company-parent-link">
+                  Company
+                  <img src="images/icon-arrow-down.svg" alt=">" class="company down-arrow">
+                  <img src="images/icon-arrow-up.svg" alt="<" class="company up-arrow">
+                </a>
+  
+                <ul class="company-sub-links">
+                  <li> <a href="#">History</a> </li>
+                  <li> <a href="#">Our Team</a> </li>
+                  <li> <a href="#">Blog</a> </li>
+                </ul>
+              </li>
+              <li class="primary link"><a href="#">Careers</a></li>
+              <li class="primary link"><a href="#">About</a></li>
+            </ul>
+  
+            <ul class="secondary-nav">
+              <li id="login-link" class="secondary link"> <a href="#">Login</a> </li>
+              <li id="register-link" class="secondary link"> <a href="#">Register</a> </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="icon-menu-container"> <img src="images/icon-menu.svg" alt="" class="icon-menu"> </div>
+
+  </section class="nav-bar">
+
+  <main>
+    <div class="hero-img-container">
+      <img src="images/image-hero-desktop.png" alt="" id="image-hero-desktop">
+      <img src="images/image-hero-mobile.png" alt="" id="image-hero-mobile">
+    </div>
+
+    <div class="hero-description-container">
+      <h1 class="header">Make remote work</h1>
+
+      <p class="description">
+        Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar
+      </p>
+
+      <button>Learn more</button>
+
+      <div class="footer-icons">
+        <img src="images/client-databiz.svg" alt="">
+        <img src="images/client-audiophile.svg" alt="">
+        <img src="images/client-meet.svg" alt="">
+        <img src="images/client-maker.svg" alt="">
+      </div>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

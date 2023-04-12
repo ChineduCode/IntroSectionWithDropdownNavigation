@@ -1,0 +1,423 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Epilogue';
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 1.5em;
+
+    nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: hsl(0, 0%, 98%);
+        height: 100vh;
+        width: 65%;
+        padding: 2em;
+        box-shadow: 0 0 60px hsl(0, 0%, 41%);
+        transform: translateY(-100%) scaleY(0);
+        transition: all .4s ease-in-out;
+        overflow: scroll;
+
+        a{
+            text-decoration: none;
+            color: hsl(0, 0%, 41%);
+            font-size: 20px;
+
+            &:active{
+                color: hsl(0, 0%, 8%);
+                font-weight: 600;
+            }
+        }
+
+        .icon-close-menu-container{
+            text-align: right;
+
+            img{cursor: pointer;}
+        }
+
+        .nav-container{
+            margin-top: 2em;
+
+            .primary-nav{
+                .primary.link{
+                    margin: 25px 0;
+                }
+
+                .company-sub-links, .features-sub-links{
+                    margin: 0 0 0 30px;
+                    height: 0px;
+                    overflow: hidden;
+                    transition: all .4s ease-in-out;
+
+                    li{
+                        margin: 20px 0;
+                    }
+                }
+
+                .features-sub-links{
+                    li{
+                        a{
+                            display: flex;
+                            align-items: center;
+                            span{
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+
+                //JavaScript styling for features sub links
+                .features-sub-links-active{
+                    height: 170px;
+                }
+                //JavaScript styling for company sub links
+                .company-sub-links-active{
+                    height: 130px;
+                }
+
+
+                .down-arrow, .up-arrow{
+                    position: relative;
+                    bottom: 3px;
+                    left: 10px;
+                }
+                .up-arrow{display: none;}
+            }
+
+            .secondary-nav{
+                text-align: center;
+                margin-top: 4em;
+
+                .secondary.link{
+                    margin: 22px 0;
+                }
+
+                #register-link{
+                    padding: 10px;
+                    border: 2px solid hsl(0, 0%, 41%);
+                    border-radius: 15px;
+
+                    &:active{
+                        border: 2px solid hsl(0, 0%, 8%);
+                    }
+                }
+            }
+        }
+    }
+    
+    //JavaScript styling for nav display
+    .nav-active{
+        transform: translateY(0%) scaleY(1);
+    }
+
+
+    .icon-menu{
+        cursor: pointer;
+    }
+}
+
+main{
+    .hero-img-container{
+        #image-hero-desktop{
+            display: none;
+        }
+        #image-hero-mobile{
+            width: 100%;
+        }
+    }
+
+    .hero-description-container{
+        text-align: center;
+        padding: 2em 1em;
+
+        .header{
+            color: hsl(0, 0%, 8%);
+            font: {
+                size: 35px;
+                weight: 900;
+            }
+        }
+
+        .description{
+            margin: 1em 0;
+            font-size: 18px;
+            color: hsl(0, 0%, 41%);
+            line-height: 27px;
+        }
+
+        button{
+            font-size: 18px;
+            cursor: pointer;
+            color: hsl(0, 0%, 98%);
+            background-color: hsl(0, 0%, 8%);
+            padding: 10px 18px;
+            border: 2px solid hsl(0, 0%, 8%);
+            border-radius: 12px;
+            margin: 1em 0;
+
+            &:active{
+                color: hsl(0, 0%, 8%);
+                background-color: hsl(0, 0%, 98%);
+                font-weight: 600;
+            }
+        }
+
+        .footer-icons{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 4em;
+
+            img{
+                width: 75px;
+            }
+        }
+    }
+}
+
+
+//desktop design
+
+@media only screen and (min-width: 768px) {
+    .nav-bar{
+        display: unset;
+        padding: unset;
+
+        .logo-nav-container{ 
+            padding: 2em 1.5em;
+            display: flex;
+            align-items: center;
+        }
+
+        nav{
+            position: unset;
+            background-color: unset;
+            height: auto;
+            width: unset;
+            padding: 0px;
+            box-shadow: unset;
+            transform: unset;
+            transition: unset;
+            overflow: hidden;
+
+            .nav-container{
+                margin: 0px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .primary-nav{
+                    display: flex;
+                    margin-left: 1em;
+                    
+                    .primary.link{
+                        margin: 0px 8px;
+                        a{
+                            font-size: 18px;
+                        }
+                    }
+    
+                    .company-sub-links, .features-sub-links{
+                        margin: 0px;
+                        height: 0px;
+                        overflow: hidden;
+                        transition: all .4s ease-in-out;
+                        position: absolute;
+                        background-color: white;
+                        margin-top: 20px;
+                        border-radius: 10px;
+                        padding: 0px 25px;
+                        box-shadow: 0 0 20px lightgray;
+    
+                        li{
+                            margin: 15px 0;
+                            a{
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                    .features-sub-links{
+                        margin-left: -70px;
+                    }
+
+                    .company-sub-links{
+                        margin-left: 8px;
+                    }
+    
+    
+                    //JavaScript styling for features sub links
+                    .features-sub-links-active{
+                        height: 170px;
+                    }
+                    //JavaScript styling for company sub links
+                    .company-sub-links-active{
+                        height: 130px;
+                    }
+    
+    
+                    .down-arrow, .up-arrow{
+                        position: unset;
+                    }
+                    .up-arrow{display: none;}
+                }
+            
+                .secondary-nav{
+                    margin-top: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    position: absolute;
+                    right: 1.5em;
+    
+                    .secondary.link{
+                        margin: 0px 8px;
+                        a{
+                            font-size: 18px;
+                        }
+                    }
+    
+                    #register-link{
+                        padding: 10px 20px;
+                        border: 2px solid hsl(0, 0%, 41%);
+                        border-radius: 15px;
+    
+                        &:active{
+                            border: 2px solid hsl(0, 0%, 8%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .icon-close-menu-container{display: none;}
+        .icon-menu-container{display: none;}
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: end;
+        padding: 3% 6% 8%;
+        direction: rtl;
+
+
+        .hero-img-container{
+            width: 90%;
+            justify-self: start;
+            #image-hero-desktop{
+                display: block;
+                width: 100%;
+            }
+            #image-hero-mobile{
+                display: none;
+            }
+        }
+
+        .hero-description-container{
+            text-align: end;
+            padding: 2em 1em 0;
+            justify-self: end;
+            width: 90%;
+            .header{
+                color: hsl(0, 0%, 8%);
+                font: {
+                    weight: 900;
+                    size: 40px;
+                }
+            }
+    
+            .description{
+                margin: 1em 0;
+                font-size: 20px;
+                color: hsl(0, 0%, 41%);
+                line-height: 27px;
+            }
+    
+            button{
+                font-size: 18px;
+                cursor: pointer;
+                color: hsl(0, 0%, 98%);
+                background-color: hsl(0, 0%, 8%);
+                padding: 10px 18px;
+                border: 2px solid hsl(0, 0%, 8%);
+                border-radius: 12px;
+                margin: 1em 0;
+    
+                &:active{
+                    color: hsl(0, 0%, 8%);
+                    background-color: hsl(0, 0%, 98%);
+                    font-weight: 600;
+                }
+            }
+    
+            .footer-icons{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 1.5em;
+    
+                img{
+                    width: 75px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1114px){
+    .nav-bar{
+        .logo-nav-container{
+            padding: 2em 2.5em;
+
+            .nav-container{
+                .primary-nav{
+                    margin-left: 3em;
+                    
+                    .primary.link{
+                        margin: 0px 18px;
+                    }
+                }
+            
+                .secondary-nav{
+                    right: 2em;
+    
+                    .secondary.link{
+                        margin: 0px 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        padding: 3% 12% 8%;
+      
+        .hero-description-container{
+            .header{
+                font: {
+                    size: 70px;
+                    weight: 900;
+                }
+                margin-bottom: .5em;
+            }
+
+            .footer-icons{
+                margin-top: 5em;
+            }
+        }
+    }
+    
+}
